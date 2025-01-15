@@ -27,7 +27,7 @@
 .film-image-container {
     width: 50%;
     img {
-        width: 470px;
+        height: calc(100vh - 30px);
     }
 }
 
