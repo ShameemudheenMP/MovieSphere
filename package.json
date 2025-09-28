@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "github build": "ng build --prod --base-href 'https://ShameemudheenMP.github.io/MovieSphere/'"
+    "github-build": "ng build --prod --base-href 'https://ShameemudheenMP.github.io/MovieSphere/'",
+    "github-deploy": "ng deploy --base-href=/MovieSphere/ --dir=dist/movie-sphere"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +32,7 @@
     "@angular/compiler-cli": "^14.3.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "angular-cli-ghpages": "^2.0.3",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
