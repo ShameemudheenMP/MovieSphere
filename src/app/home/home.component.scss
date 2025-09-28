@@ -1,0 +1,83 @@
+.all-movies {
+    height: calc(100vh - 70px);
+    h5 {
+        border-left: 5px solid #ff9900;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.trending-and-theatre-movies {
+    border-right: 1px solid #fdc827;
+    width: 75%;
+}
+
+.all-time-popular {
+    width: 25%;
+}
+
+
+.session-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-card {
+    width: 145px;
+    cursor: pointer;
+    
+    .movie-picture {
+        img {
+            width: 145px;
+            border-radius: 5px;
+        }
+    }
+
+    .movie-name {
+        margin-top: 5px;
+        width: 145px;
+        height: 45px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.all-time-popular {
+    padding: 25px;
+
+    .movie-details-container {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        &:hover {
+            transform: scale(1.05);
+            background-color: #ffebb2;
+        }
+    }
+    
+    .movie-name {
+        display: flex;
+        align-items: center;
+        width: 200px;
+        height: 40px;
+    }
+
+}
+
+.movie-name {
+    font-size: 14px;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.view-all-btn {
+    color: #ff9900;
+    cursor: pointer;
+    font-size: 14px;
+}
+

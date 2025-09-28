@@ -1,0 +1,14 @@
+.movie-rating {
+    cursor: default;
+    display: flex;
+    font-size: 18px;
+    color: orange;
+    .rating {
+        color: black;
+        margin-right: 5px; 
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+    }
+}
+

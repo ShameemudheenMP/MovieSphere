@@ -1,0 +1,30 @@
+<div class="login-container">
+    <div class="film-image-container">
+        <img src="../../assets/images/film.png" alt="film image">
+    </div>
+    <div>
+        <div class="indro">
+            <h3 class="app-name">MOVIE SPHERE</h3>
+            <p>
+                Movie Sphere is the world’s most trusted recommendation resources for
+                quality entertainment. As the leading online aggregator of movie and TV show
+                reviews from critics, we provide fans with a comprehensive guide to what’s
+                Fresh – and what’s Rotten – in theaters and at home. If you’re an
+                entertainment fan looking for a recommendation, or to share an opinion,
+                you’ve come to the right place.
+            </p>
+        </div>
+        <form class="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" [(ngModel)]="username" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" [(ngModel)]="password" class="form-control" name="password">
+            </div>
+            <button type="submit" (click)="login()" class="btn btn-dark">Login</button>
+            <small class="error-msg">{{ errorMsg }}</small>
+        </form>
+    </div>
+</div>

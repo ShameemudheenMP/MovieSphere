@@ -1,0 +1,59 @@
+.container {
+    padding: 30px 200px 0px 200px;
+}
+
+.movie-details {
+    width: 40%;
+    padding: 15px;
+
+    .movie-thumbnail {
+        margin-top: 15px;
+        img {
+            height: 400px;
+            width: 300px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.rating-form-container {
+    width: 60%;
+    padding: 15px;
+}
+
+.rating-form {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    label {
+        font-weight: 500;
+    }
+
+    .form-control {
+        margin-top: 8px;
+    }
+}
+
+.reviews-session {
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.review {
+    background-color: #f3f0f0cc;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+
+    .author {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .date {
+        font-size: 12px;
+        margin-top: -3px;
+    }
+}

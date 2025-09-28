@@ -1,0 +1,63 @@
+<app-header></app-header>
+<div class="container">
+    <div class="d-flex">
+        <div class="movie-details">
+            <h3>{{ movieDetails?.name }}</h3>
+            <app-rating [rating]="movieDetails?.rating" [readonly]="true"></app-rating>
+            <div class="movie-thumbnail">
+                <img [src]="movieDetails?.cover">
+            </div>
+        </div>
+        <div class="rating-form-container">
+            <form class="form-group rating-form">
+                <span>Rate this movie</span>
+                <div class="mt-4">
+                    <label>Name</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="mt-4 d-flex">
+                    <label class="me-2">Rating</label>
+                    <app-rating class="" [showRating]="false"></app-rating>
+                </div>
+                <div class="mt-4">
+                    <label>Reivew</label>
+                    <textarea rows="3" class="form-control"></textarea>
+                </div>
+                <div class="mt-auto d-flex justify-content-end">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="reviews-session">
+        <h6>Reviews</h6>
+        <div class="reivews">
+            <!-- <div class="review">
+                <span>Author name</span>
+                <div class="d-flex justify-content-between">
+                    <div>review text</div>
+                    <div>
+                        <app-rating></app-rating>
+                    </div>
+                </div>
+            </div> -->
+            <ng-container *ngIf="movieReviews && movieReviews.length > 0">
+                <div *ngFor="let review of movieReviews" class="review">
+                    <div class="author">{{review?.author}}</div>
+                    <div class="date">{{review?.published_on | date: 'dd-MMM-YYYY'}}</div>
+                    <div class="d-flex justify-content-between">
+                        <div>{{review?.review}}</div>
+                        <div>
+                            <app-rating [rating]="review?.rating" [readonly]="true"></app-rating>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="!movieReviews || movieReviews.length == 0">
+                <div class="fst-italic">
+                    No reivews yet
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

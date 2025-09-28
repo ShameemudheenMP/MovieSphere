@@ -1,0 +1,8 @@
+<div class="movie-rating">
+    <div *ngIf="showRating" class="rating">
+        {{ rating }}
+    </div>
+    <div>
+        <ngb-rating [(rate)]="rating" [readonly]="readonly" [max]="max"></ngb-rating>
+    </div>
+</div>
